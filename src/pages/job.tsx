@@ -1,5 +1,5 @@
 import { withUnAuthentication } from 'common/hocs';
-import Index from 'modules/auth/login';
+import Index from 'modules/job/create';
 
 const IndexUnAuthentication = withUnAuthentication<JSX.Element>(Index);
 
