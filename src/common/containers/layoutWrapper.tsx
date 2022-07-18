@@ -5,7 +5,6 @@ type PropsType = {
 };
 
 const Index: React.FC<PropsType> = ({ children }) => {
-  console.log('children', children);
   return (
     <div>
       <span>{children.type.layout === 'admin' ? 'admin' : 'company'}</span>
