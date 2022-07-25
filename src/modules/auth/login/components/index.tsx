@@ -4,23 +4,25 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import validateSchema from '../validateSchema';
 import { useEffect } from 'react';
 import { useHookForm } from 'common/hooks/useForm';
+import { IAuthState } from 'store/reducers';
 
-interface IFormInputs {
+export interface IFormInputs {
   username: string;
   password: string;
 }
 
-const Index = () => {
+type PropsType = {
+  auth: IAuthState;
+  onSubmit: any;
+};
+
+const Index: React.FC<PropsType> = ({ auth, onSubmit }) => {
   const {
     handleSubmit,
     control,
     formState: { errors },
     setData,
   } = useHookForm<IFormInputs>({ resolver: yupResolver(validateSchema) });
-
-  const onSubmit = (data: IFormInputs) => {
-    console.log('data', data);
-  };
 
   useEffect(() => {
     setData({
@@ -31,6 +33,7 @@ const Index = () => {
 
   return (
     <div className="w-[720px] mx-auto flex justify-center py-[300px]">
+      <h4>{auth.email}</h4>
       <div>
         <Controller
           name="username"

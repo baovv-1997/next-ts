@@ -22,8 +22,6 @@ const Index = () => {
     name: 'jobPeriods',
   });
 
-  console.log('fields', fields);
-
   return (
     <div className="w-full h-screen flex justify-center">
       <div>
