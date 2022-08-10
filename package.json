@@ -15,7 +15,10 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.33.1",
+    "react-redux": "^8.0.2",
+    "redux": "^4.2.0",
     "socket.io-client": "^4.5.1",
+    "unstated-next": "^1.1.0",
     "yup": "^0.32.11"
   },
   "devDependencies": {
